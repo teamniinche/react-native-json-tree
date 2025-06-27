@@ -108,7 +108,7 @@ export const JSONNode = ({
         <JSONValueNode key={key} {...simpleNodeProps} valueGetter={(raw) => `"${raw}"`} />
       )
     case 'Number':
-      return <JSONValueNode key={key} {...simpleNodeProps} />
+      return <JSONValueNode key={key} {...simpleNodeProps} valueGetter={(raw) => raw}/>
     case 'Boolean':
       return (
         <JSONValueNode
